@@ -1,26 +1,26 @@
 'use client';
 
 import axios from 'axios';
-import { toast } from 'react-hot-toast';
-import { 
-  FieldValues, 
-  SubmitHandler, 
-  useForm
-} from 'react-hook-form';
-import dynamic from 'next/dynamic'
+import dynamic from 'next/dynamic';
 import { useRouter } from 'next/navigation';
 import { useMemo, useState } from "react";
+import {
+  FieldValues,
+  SubmitHandler,
+  useForm
+} from 'react-hook-form';
+import { toast } from 'react-hot-toast';
 
 import useRentModal from '@/app/hooks/useRentModal';
 
-import Modal from "./Modal";
-import Counter from "../inputs/Counter";
+import Heading from '../Heading';
 import CategoryInput from '../inputs/CategoryInput';
+import Counter from "../inputs/Counter";
 import CountrySelect from "../inputs/CountrySelect";
-import { categories } from '../navbar/Categories';
 import ImageUpload from '../inputs/ImageUpload';
 import Input from '../inputs/Input';
-import Heading from '../Heading';
+import { categories } from '../navbar/Categories';
+import Modal from "./Modal";
 
 enum STEPS {
   CATEGORY = 0,
@@ -179,28 +179,28 @@ const RentModal = () => {
     bodyContent = (
       <div className="flex flex-col gap-8">
         <Heading
-          title="Share some basics about your place"
-          subtitle="What amenitis do you have?"
+          title="Share some basics about your event"
+          subtitle="What sporting events do you offer?"
         />
         <Counter 
           onChange={(value) => setCustomValue('guestCount', value)}
           value={guestCount}
-          title="Guests" 
-          subtitle="How many guests do you allow?"
+          title="Domestic Matches" 
+          subtitle="Do you host matches for domestic teams?"
         />
         <hr />
         <Counter 
           onChange={(value) => setCustomValue('roomCount', value)}
           value={roomCount}
-          title="Rooms" 
-          subtitle="How many rooms do you have?"
+          title="Training" 
+          subtitle="Do you provide training for players?"
         />
         <hr />
         <Counter 
           onChange={(value) => setCustomValue('bathroomCount', value)}
           value={bathroomCount}
-          title="Bathrooms" 
-          subtitle="How many bathrooms do you have?"
+          title="International Tours" 
+          subtitle="Do you host teams from abroad?"
         />
       </div>
     )
@@ -274,7 +274,7 @@ const RentModal = () => {
     <Modal
       disabled={isLoading}
       isOpen={rentModal.isOpen}
-      title="Airbnb your home!"
+      title="Set11 Host"
       actionLabel={actionLabel}
       onSubmit={handleSubmit(onSubmit)}
       secondaryActionLabel={secondaryActionLabel}

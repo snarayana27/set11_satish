@@ -1,17 +1,17 @@
 'use client';
 
-import { useCallback, useState } from "react";
-import { AiOutlineMenu } from "react-icons/ai";
 import { signOut } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import { useCallback, useState } from "react";
+import { AiOutlineMenu } from "react-icons/ai";
 
 import useLoginModal from "@/app/hooks/useLoginModal";
 import useRegisterModal from "@/app/hooks/useRegisterModal";
 import useRentModal from "@/app/hooks/useRentModal";
 import { SafeUser } from "@/app/types";
 
-import MenuItem from "./MenuItem";
 import Avatar from "../Avatar";
+import MenuItem from "./MenuItem";
 
 interface UserMenuProps {
   currentUser?: SafeUser | null
@@ -58,7 +58,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
             cursor-pointer
           "
         >
-          Airbnb your home
+          Set11 Host
         </div>
         <div 
         onClick={toggleOpen}
@@ -119,7 +119,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
                   onClick={() => router.push('/properties')}
                 />
                 <MenuItem 
-                  label="Airbnb your home" 
+                  label="Set11 Host" 
                   onClick={rentModal.onOpen}
                 />
                 <hr />
