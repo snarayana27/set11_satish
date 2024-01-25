@@ -1,0 +1,11 @@
+DATABASE_URL='mongodb+srv://santhoshlal:Kollam2024@cluster0.hfqtgpf.mongodb.net/test'
+NEXTAUTH_SECRET=<your-generated-secret>
+
+GITHUB_ID=c004a989ab71d05008c7
+GITHUB_SECRET=d0faa32a32f3af8e13201ee8557000a8066c6cec
+
+GOOGLE_CLIENT_ID=614072839651-0764nn3h80lig22fqjgu9g8988cfd7i3.apps.googleusercontent.com
+GOOGLE_CLIENT_SECRET=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
+
+NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME='dc4ybmwjv'
+
